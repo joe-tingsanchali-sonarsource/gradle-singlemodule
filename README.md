@@ -1,3 +1,5 @@
+(Originally from https://github.com/SonarSource/sonar-scanning-examples)
+
 This example demonstrates how to analyze a simple project built with gradle.
 
 Prerequisites
