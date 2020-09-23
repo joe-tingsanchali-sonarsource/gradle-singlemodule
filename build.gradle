@@ -11,8 +11,8 @@ version = '1.0'
 sonarqube {
     properties {
         property 'sonar.projectName', 'Example of SonarQube Scanner for Gradle Usage'
-        property "sonar.projectKey", "joe-tingsanchali-sonarsource_gradle-singlemodule"
-        property "sonar.organization", "joe-tingsanchali-sonarsource"
+        property "sonar.projectKey", "sonarqube-scanner-gradle"
+//        property "sonar.organization", "joe-tingsanchali-sonarsource"
         property "sonar.host.url", "https://sonarcloud.io"
     }
 }
