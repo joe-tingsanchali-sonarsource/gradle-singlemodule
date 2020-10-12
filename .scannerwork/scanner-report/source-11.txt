@@ -13,11 +13,4 @@ public class AppTest {
     classUnderTest.getGreeting4();
     classUnderTest.getGreeting5();
   }
-
-  @Test
-  public void mainHasGreeting() {
-    App classUnderTest = new App();
-//    assertNotNull("app should have a greeting", classUnderTest.getGreeting());
-    App.main();
-  }
 }
