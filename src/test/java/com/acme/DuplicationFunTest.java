@@ -42,11 +42,19 @@ public class DuplicationFunTest extends TestCase {
     }
 
     @Test
-    public void testCheckPrimeAgain3() {
+    public void testCheckPrimeAgain3_isNotPrime() {
         DuplicationFun classUnderTest = new DuplicationFun();
-        classUnderTest.checkPrimeAgain3();
+        classUnderTest.checkPrimeAgain3(29);
 
         assertEquals("29 is a prime number.", outputStreamCaptor.toString().trim());
+    }
+
+    @Test
+    public void testCheckPrimeAgain3_isPrime() {
+        DuplicationFun classUnderTest = new DuplicationFun();
+        classUnderTest.checkPrimeAgain3(28);
+
+        assertEquals("28 is not a prime number.", outputStreamCaptor.toString().trim());
     }
 
     private void print(String output) {
