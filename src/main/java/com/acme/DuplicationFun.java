@@ -2,6 +2,14 @@ package com.acme;
 
 public class DuplicationFun {
 
+    private void simiBlock(boolean flag, int num) {
+        if (!flag) {
+            System.out.println(num + " is a prime number.");
+        } else {
+            System.out.println(num + " is not a prime number.");
+        }
+    }
+
     public void checkPrime() {
         int num = 29;
         boolean flag = false;
