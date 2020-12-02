@@ -1,2 +1,0 @@
- :
-Rsonarqube-scanner-gradle
