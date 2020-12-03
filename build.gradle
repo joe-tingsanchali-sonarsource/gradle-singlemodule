@@ -12,10 +12,20 @@ sonarqube {
     properties {
         property 'sonar.projectName', 'gradle-singlemodule'
         property "sonar.projectKey", "sonarqube-scanner-gradle"
-        property "sonar.organization", "joe-tingsanchali-sonarsource"
-        property "sonar.host.url", "https://sonarcloud.io"
-//        property "sonar.host.url", "http://localhost:8200"
+//        property "sonar.organization", "joe-tingsanchali-sonarsource"
+//        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.host.url", "http://localhost:7900"
+        property "sonar.branch.name", getWorkingBranch()
+        property "sonar.login", "admin"
+        property "sonar.password", "admin"
     }
+}
+
+def getWorkingBranch() {
+    // Triple double-quotes for the breaklines
+    def workingBranch = "git rev-parse --abbrev-ref HEAD".execute().text.trim()
+    print "Working branch: " + workingBranch
+    return workingBranch
 }
 
 // In this section you declare where to find the dependencies of your project
@@ -26,6 +36,8 @@ repositories {
 }
 
 dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
+
     // This dependency is found on compile classpath of this component and consumers.
     compile 'com.google.guava:guava:21.0'
 
@@ -35,6 +47,10 @@ dependencies {
 
 // Define the main class for the application
 mainClassName = 'App'
+
+test {
+    useJUnitPlatform()
+}
 
 jacocoTestReport {
     reports {
