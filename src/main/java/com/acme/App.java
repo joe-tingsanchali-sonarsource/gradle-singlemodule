@@ -9,6 +9,10 @@ public class App {
         return "whatever";
     }
 
+    public String getGreeting3() {
+        return "whateve2r";
+    }
+
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
     }
