@@ -14,9 +14,10 @@ sonarqube {
         property "sonar.projectKey", "sonarqube-scanner-gradle"
 //        property "sonar.organization", "joe-tingsanchali-sonarsource"
 //        property "sonar.host.url", "https://sonarcloud.io"
-        property "sonar.host.url", "http://localhost:7900"
+        property "sonar.host.url", "http://localhost:8400"
         property "sonar.login", "admin"
         property "sonar.password", "admin"
+        property "sonar.verbose", "true"
     }
 }
 
